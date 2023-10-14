@@ -1,0 +1,51 @@
+<p>addtodo works!</p>
+
+  <div class="container bg-danger text-center">
+    <div class="row">
+        <div class="col-6 shadow p-3">
+            <h1 class="text-center">Todo App List</h1>
+            <input type="text" class="form-control my-2"
+            [(ngModel)]="name" placeholder="Todo-Name">  
+            <input type="datetime-local" class="form-control my-2"
+            [(ngModel)]="date" placeholder="Todo-Date"/> 
+            <input type="text" class="form-control my-2"
+            [(ngModel)]="category" placeholder="Todo-Category"/> 
+            <button class="btn btn-dark w--100" (click)="addtoTodo()"> ADD TODO</button>
+        </div>
+        <div></div>
+    </div>
+    </div>
+
+    <table class="table table-bordered table-striped mt-1">
+        <thead>
+            <tr class='text-center'>
+            <th>S/N</th>
+            <th>TODO NAME</th>
+            <th>TODO DATE</th>
+            <th>TODO CATEGORY</th>
+            <th>ACTION</th>
+        </tr>
+    </thead>
+    <tbody class="text-center">
+        <tr *ngFor="let todo of addtodoArray; let id=index">
+            <td>{{id+1}}</td>
+            <td>{{todo.Todoname}}</td>
+            <td>{{todo.Tododate}}</td>
+            <td>{{todo.Todocategory}}</td>
+            <button
+            class="btn btn-secondary"> Update
+          </button>
+          <button
+            class="btn btn-danger ms-3"  (click)="deleteTodo(id)">Delete
+          </button>
+<!-- <form *ngIf="isEditing === id">
+    <input [(ngModel)]="todo.Todoname" name="newTodoname" placeholder="New Name">
+    <input [(ngModel)]="todo.Tododate" name="newTododate" placeholder="New Date">
+    <input [(ngModel)]="todo.Todocategory" name="newTodocategory" placeholder="New Category">
+    <button class="btn btn-success" (click)="saveEdit(id)">Save</button>
+  </form>
+  <button class="btn btn-secondary" (click)="startEditing(id)">Edit</button> -->
+  
+        </tr>
+    </tbody>
+</table>

@@ -1,1 +1,42 @@
-<p>contact works!</p>
+<div class="container bg-light">
+    <div class="row">
+        <div class="col-6 shadow p-3">
+            <h1>Create Contact</h1>
+            <input type="text" class="form-control my-2"
+            [(ngModel)]="firstname" placeholder="First Name">
+            <input type="text" class="form-control my-2"
+            [(ngModel)]="lastname" placeholder="Last Name">
+            <input type="text" class="form-control my-2"
+            [(ngModel)]="email" placeholder="E-mail">
+            <input type="text" class="form-control my-2"
+            [(ngModel)]="phonenumber" placeholder="Phone Number">
+            <input type="text" class="form-control my-2"
+            [(ngModel)]="address" placeholder="Address">
+            <button class="btn btn-dark w--100" (click)="addContact()">Add</button>
+        </div>
+        <div></div>
+    </div>
+    </div>
+
+    <div class="table table-hover table-striped">
+        <tr>
+            <th>S/N</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Edit</th>
+            <th>delete</th>
+        </tr>
+        <tr *ngFor="let contact of contactArray; let id=index">
+            <td>{{id+1}}</td>
+            <td>{{contact.Firstname}}</td>
+            <td>{{contact.Lastname}}</td>
+            <td>{{contact.Email}}</td>
+            <td>{{contact.Phoneno}}</td>
+            <td>{{contact.Address}}</td>
+            <td><button class="btn btn-success">Edit</button></td>
+            <td><button class="btn btn-danger">Delete</button></td>
+        </tr>
+    </div>
