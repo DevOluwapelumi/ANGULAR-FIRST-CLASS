@@ -7,12 +7,16 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { AddtocartComponent } from './addtocart/addtocart.component';
 import { addTodoComponent } from './addtodo/addtodo.component';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 const routes: Routes = [
   { path: 'Home', component:HomeComponent },
   { path: 'addtocart', component:AddtocartComponent },
   { path: 'addtodo', component:addTodoComponent },
-  { path: 'contact', component:ContactComponent },
+  {path: 'contact', children: [
+    {path:'', component:ContactComponent},
+    {path:':id', component:ContactDetailsComponent},
+  ]},
   { path: 'login', component:LoginComponent },
   { path: 'signup', component:SignupComponent },
 

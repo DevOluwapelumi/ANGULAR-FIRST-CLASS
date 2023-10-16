@@ -22,6 +22,16 @@ export class ContactComponent {
   public address = '';
   public contactArray: ContactInterface[] = [];
 
+  ngOnInit() {
+    if(localStorage['contactDetails']){
+      this.contactArray=JSON.parse(localStorage.getItem('contactDetails')!)
+      console.log(this.contactArray);
+      
+    } else {
+      this.contactArray=[]
+    }
+  }
+
   addContact() {
     console.log(this.lastname);
     let contactObject: ContactInterface = {
@@ -34,6 +44,7 @@ export class ContactComponent {
 
     this.contactArray.push(contactObject);
     console.log(this.contactArray);
+    localStorage.setItem('contactDetails', JSON.stringify(this.contactArray))
     
     // Clear the input fields after adding a contact
     this.firstname = '';
@@ -41,6 +52,12 @@ export class ContactComponent {
     this.email = '';
     this.phonenumber = '';
     this.address = '';
+  }
+
+  deleteContact(index: number) {
+    console.log(index);
+    this.contactArray.splice(index, 1)
+    localStorage.setItem('contactDetails', JSON.stringify(this.contactArray));
   }
 
 

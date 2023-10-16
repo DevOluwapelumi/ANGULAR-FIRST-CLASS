@@ -14,10 +14,17 @@
             [(ngModel)]="address" placeholder="Address">
             <button class="btn btn-dark w--100" (click)="addContact()">Add</button>
         </div>
-        <div></div>
+        <div class="col-6"> 
+            <div class="row" *ngFor="let contact of contactArray, let i=index">
+                <div class="col-3">Welcome, {{contact.Firstname}}</div>
+                <div class="col-3"><button class="btn btn-info my-2" routerLink="{{i}}">View</button></div>
+                <div class="col-3"><button class="btn btn-danger my-2" (click)="deleteContact(i)">Delete</button></div>
+                <div class="col-3"><button class="btn btn-success my-2" >Edit</button></div>
+            </div>   
+        </div>
     </div>
     </div>
-
+    <div *ngIf="contactArray.length>0">
     <div class="table table-hover table-striped">
         <tr>
             <th>S/N</th>
@@ -40,3 +47,4 @@
             <td><button class="btn btn-danger">Delete</button></td>
         </tr>
     </div>
+</div>

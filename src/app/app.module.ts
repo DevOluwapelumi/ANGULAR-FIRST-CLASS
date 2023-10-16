@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { AddtocartComponent } from './addtocart/addtocart.component';
 import { FormsModule } from '@angular/forms';
 import { addTodoComponent } from './addtodo/addtodo.component';
+import { ContactDetailsComponent } from './contact-details/contact-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { addTodoComponent } from './addtodo/addtodo.component';
     NavbarComponent,
     HomeComponent,
     AddtocartComponent,
-    addTodoComponent
+    addTodoComponent,
+    ContactDetailsComponent
   ],
   imports: [
     BrowserModule,
