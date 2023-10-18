@@ -33,7 +33,7 @@ export class ContactComponent {
   }
 
   addContact() {
-    console.log(this.lastname);
+    console.log(this.firstname);
     let contactObject: ContactInterface = {
       Firstname: this.firstname,
       Lastname: this.lastname,
