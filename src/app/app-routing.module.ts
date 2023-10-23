@@ -8,11 +8,13 @@ import { SignupComponent } from './signup/signup.component';
 import { AddtocartComponent } from './addtocart/addtocart.component';
 import { addTodoComponent } from './addtodo/addtodo.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { DisplayApiComponent } from './display-api/display-api.component';
 
 const routes: Routes = [
   { path: 'Home', component:HomeComponent },
   { path: 'addtocart', component:AddtocartComponent },
   { path: 'addtodo', component:addTodoComponent },
+  { path: 'api', component:DisplayApiComponent },
   {path: 'contact', children: [
     {path:'', component:ContactComponent},
     {path:':id', component:ContactDetailsComponent},

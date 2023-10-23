@@ -1,0 +1,14 @@
+<p>errorpage works!</p>
+<div *ngFor="let show of showArray">
+    <p>{{show}}</p>
+</div>
+
+<div class="container">
+    <div class="row" *ngFor="let contact of createContact">
+        <div class="col-6 mx-auto shadow">
+            <p>{{contact.Firstname}}</p>
+            <p>{{contact.Lastname}}</p>
+            <p>{{contact.Phoneno}}</p>
+        </div>
+    </div>
+</div>

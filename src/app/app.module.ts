@@ -12,6 +12,9 @@ import { AddtocartComponent } from './addtocart/addtocart.component';
 import { FormsModule } from '@angular/forms';
 import { addTodoComponent } from './addtodo/addtodo.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
+import { ErrorpageComponent } from './errorpage/errorpage.component';
+import { DisplayApiComponent } from './display-api/display-api.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
     HomeComponent,
     AddtocartComponent,
     addTodoComponent,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    ErrorpageComponent,
+    DisplayApiComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
