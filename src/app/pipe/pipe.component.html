@@ -1,0 +1,41 @@
+<p>pipe works!</p>
+
+<p>{{'hello' | uppercase}}</p>
+<p>{{'HELLO' | lowercase}}</p>
+<p>{{time}}</p>
+<p>{{time | date:'short'}}</p>
+<p>{{time | date:'full'}}</p>
+<p>{{time | date:'long'}}</p>
+<p>{{time | date:'shortTime'}}</p>
+<p>{{time | date:'fullTime'}}</p>
+<p>{{time | date:'longTime'}}</p>
+<p>{{time | date:'shortDate'}}</p>
+<p>{{time | date:'fullDate'}}</p>
+<p>{{time | date:'longDate'}}</p>
+<p>{{time | date:'d/M/Y'}}</p>
+<p>{{'Agriculture' | slice:4:11}}</p>
+<p>{{4056780 | currency: 'USD' : 'symbol-narrow'}}</p>
+<p>{{4056780 | currency: 'EUR' : 'code'}}</p>
+<p>{{4056780 | currency: 'NGN' : 'symbol-narrow'}}</p>
+<p>{{2/4|percent}}</p>
+<p>{{0.978 | number:'4.1-2'}}</p>
+
+
+
+<div *ngIf="name">
+    <div>This is true</div>
+</div>
+
+
+<div [ngSwitch]="'hello'">
+    <div *ngSwitchCase="'hello'">This is the hello div</div>
+    <div *ngSwitchCase="'hi'">This is not the hello div</div>
+    <div *ngSwitchDefault="">None</div>
+</div>
+<div>
+<div [ngClass]="condition">
+    <div *ngSwitchCase="color1">This is the red color</div>
+    <div *ngSwitchCase="color2">This is the blue color</div>
+</div>
+<button (click)="changeColor()">Change Color</button>
+</div>

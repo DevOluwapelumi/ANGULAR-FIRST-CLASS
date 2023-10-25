@@ -15,6 +15,7 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { DisplayApiComponent } from './display-api/display-api.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PipeComponent } from './pipe/pipe.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     ContactDetailsComponent,
     ErrorpageComponent,
     DisplayApiComponent,
+    PipeComponent,
   ],
   imports: [
     BrowserModule,
