@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="row shadow" *ngFor="let item of foodItems"
+    style="cursor: pointer;" (click)="sendItem(item)">
+        <p class="text-center text-success my-3" >{{item.name}}</p>
+    </div>
+    <div class="row shadow">
+        <app-state2></app-state2>
+    </div>
+</div>
