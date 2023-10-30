@@ -26,8 +26,6 @@ export class State2Component {
     this.itemsService.subBehaviour.subscribe(data => {
       this.itemObj = data
       console.log(this.itemObj);
-      
-      
     }, (error) => {
       console.log(error);
       

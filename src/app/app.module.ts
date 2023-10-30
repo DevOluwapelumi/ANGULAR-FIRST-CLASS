@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PipeComponent } from './pipe/pipe.component';
 import { State1Component } from './state1/state1.component';
 import { State2Component } from './state2/state2.component';
+import { AssdetailsComponent } from './assdetails/assdetails.component';
+// import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,8 @@ import { State2Component } from './state2/state2.component';
     PipeComponent,
     State1Component,
     State2Component,
+    AssdetailsComponent,
+    // RegisterComponent,
   ],
   imports: [
     BrowserModule,

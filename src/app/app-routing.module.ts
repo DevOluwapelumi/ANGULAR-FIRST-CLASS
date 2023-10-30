@@ -11,6 +11,7 @@ import { ContactDetailsComponent } from './contact-details/contact-details.compo
 import { DisplayApiComponent } from './display-api/display-api.component';
 import { State1Component } from './state1/state1.component';
 import { State2Component } from './state2/state2.component';
+import { AssdetailsComponent } from './assdetails/assdetails.component';
 
 const routes: Routes = [
   { path: 'Home', component:HomeComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   ]},
   { path: 'login', component:LoginComponent },
   { path: 'signup', component:SignupComponent },
+  { path: 'assdetails', component:AssdetailsComponent },
   { path: 'state1', component:State1Component },
   { path: 'state2', component:State2Component },
 
