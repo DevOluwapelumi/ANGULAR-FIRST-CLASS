@@ -7,11 +7,13 @@
     </ul>
   </div>
 
-    <div class="container my-4" *ngIf="selectedUserData">
+    <div class="container my-4 col-6" *ngIf="selectedUserData">
         <input type="text" class="form-control my-2" value="{{selectedUserData.name}}" [(ngModel)]="selectedUserData.name">
         <h2>User Details</h2>
-      <p class="text-center text-info"><strong>Name:</strong> {{ selectedUserData.name }}</p>
-      <p class="text-center text-info"><strong>Email:</strong> {{ selectedUserData.email }}</p>
+      <p class="text-center text-info"><strong>Task-Name:</strong> {{ selectedUserData.name }}</p>
+      <p class="text-center text-secondary"><strong>Task- Describtion:</strong> {{ selectedUserData.desc }}</p>
+      <p class="text-center text-danger"><strong>Task-Time:</strong> {{ selectedUserData.time }}</p>
+      <p class="text-center text-primary"><strong>Task-Date:</strong> {{ selectedUserData.date }}</p>
     </div>
 
 

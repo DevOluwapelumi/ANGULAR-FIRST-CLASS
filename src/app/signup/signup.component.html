@@ -1,25 +1,50 @@
-
 <div class="container">
-    <h2>Signup</h2>
-    <form (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" [(ngModel)]="userData.name" class="form-control" required>
-      </div>
-  
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" [(ngModel)]="userData.email" class="form-control" required>
-      </div>
-  
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-
-      
-      
-  
-  <div class="row shadow">
-<app-assdetails></app-assdetails>
+  <div class="row">
+    <div class="col-6 mx-auto shadow">
+      <h1 class="text-center">ADD TASK</h1>
+      <form (ngSubmit)="onSubmit()">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="userData.name"
+          class="form-control mb-3"
+          placeholder="Enter task name"
+          required
+        />
+        <input
+          type="text"
+          id="desc"
+          name="desc"
+          [(ngModel)]="userData.desc"
+          class="form-control mb-3"
+          placeholder="Enter task describtion"
+          required
+        />
+        <input
+          type="time"
+          id="time"
+          name="time"
+          [(ngModel)]="userData.time"
+          class="form-control mb-3"
+          placeholder="Enter task time"
+          required
+        />
+        <input
+          type="date"
+          id="date"
+          name="date"
+          [(ngModel)]="userData.date"
+          class="form-control mb-3"
+          placeholder="Enter task date"
+          required
+        />
+        <button type="submit" class="btn btn-outline-success w-100 mb-3">Submit</button>
+      </form>
+    </div>
+  </div>
 </div>
 
-  
+<div class="row shadow">
+  <app-assdetails></app-assdetails>
+</div>
