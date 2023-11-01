@@ -29,3 +29,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 Angular is a popular open-source JavaScript framework for building web applications. It's maintained by Google and a community of developers. Here are some key things to know about Angular:
+
+TypeScript: Angular is built using TypeScript, a superset of JavaScript that adds static typing to the language. This helps catch errors during development and improves code maintainability.
+
+Component-Based Architecture: Angular applications are built using a component-based architecture. Components are the building blocks of the application and can be thought of as self-contained units that encapsulate HTML templates, styles, and logic.
+
+Two-Way Data Binding: Angular supports two-way data binding, which means changes to the application state are automatically reflected in the user interface, and vice versa.
+
+Dependency Injection: Angular uses a powerful dependency injection system to manage dependencies and make it easy to test components in isolation.
+
+Directives: Angular provides a range of directives that allow you to extend HTML with custom behavior. Common directives include ngIf, ngFor, and ngModel.
