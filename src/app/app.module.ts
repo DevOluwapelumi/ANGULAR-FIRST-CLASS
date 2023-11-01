@@ -19,6 +19,8 @@ import { PipeComponent } from './pipe/pipe.component';
 import { State1Component } from './state1/state1.component';
 import { State2Component } from './state2/state2.component';
 import { AssdetailsComponent } from './assdetails/assdetails.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 // import { RegisterComponent } from './register/register.component';
 
 @NgModule({
@@ -38,6 +40,8 @@ import { AssdetailsComponent } from './assdetails/assdetails.component';
     State1Component,
     State2Component,
     AssdetailsComponent,
+    ParentComponent,
+    ChildComponent,
     // RegisterComponent,
   ],
   imports: [

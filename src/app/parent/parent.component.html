@@ -1,0 +1,20 @@
+<div class="container">
+    <h1 class="text-center text-info">Parent Component</h1>
+    <div class="row shadow bg-light mb-5">
+        <div class="col-7 mx-auto">
+           <input type="text" class="form-control my-2" [(ngModel)]="post" >
+           <!-- <button (click)="send()" class="btn btn-success">Send</button> -->
+        </div>
+        <div class="col-5 shadow">
+            <p><b>Message From Child:</b> {{acceptComment}}</p>
+        </div>
+    </div>
+
+    <div class="row shadow bg-light">
+        <div class="col-8 mx-auto">
+            <!-- <app-child sendPost={{post}} ></app-child> -->
+            <app-child [sendPost]="post" (commentEmitter)="receiveComment($event)"></app-child>
+
+        </div>
+    </div>
+</div>

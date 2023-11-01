@@ -12,9 +12,12 @@ import { DisplayApiComponent } from './display-api/display-api.component';
 import { State1Component } from './state1/state1.component';
 import { State2Component } from './state2/state2.component';
 import { AssdetailsComponent } from './assdetails/assdetails.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 const routes: Routes = [
   { path: 'Home', component:HomeComponent },
+  { path: 'navbar', component:NavbarComponent },
   { path: 'addtocart', component:AddtocartComponent },
   { path: 'addtodo', component:addTodoComponent },
   { path: 'api', component:DisplayApiComponent },
@@ -27,6 +30,8 @@ const routes: Routes = [
   { path: 'assdetails', component:AssdetailsComponent },
   { path: 'state1', component:State1Component },
   { path: 'state2', component:State2Component },
+  { path: 'parent', component:ParentComponent },
+  { path: 'child', component:ChildComponent },
 
   {}
 ];
