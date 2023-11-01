@@ -14,7 +14,15 @@
 <!-- <app-pipe></app-pipe> -->
 <!-- <app-state1></app-state1> -->
 <!-- <app-signup></app-signup> -->
-<app-parent></app-parent>
+<!-- <app-parent></app-parent> -->
+
+
+<!-- src/app/app.component.html -->
+<div class="chat-app">
+    <app-receive-message *ngFor="let message of messages" [message]="message"></app-receive-message>
+    <app-send-message (messageSent)="onMessageSent($event)"></app-send-message>
+  </div>
+  
 
   
   

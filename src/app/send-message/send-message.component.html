@@ -1,0 +1,40 @@
+<!-- src/app/send-message/send-message.component.html -->
+<div class="send-message">
+    <input [(ngModel)]="newMessage" placeholder="Type your message..." (keyup.enter)="sendMessage()" />
+    <button (click)="sendMessage()" class="btn btn-success">Send</button>
+  </div>
+
+  <!-- <div class="chatbox-wrapper" style="color: blue;">
+		<div class="chatbox-message-wrapper">
+			<div class="chatbox-message-header" style="background-color: green;">
+				<div class="chatbox-message-profile">
+					<img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" class="chatbox-message-image" id="userImg">
+					<div>
+						<h4 class="chatbox-message-name" id="user"></h4>
+						<p class="chatbox-message-status">online</p>
+					</div>
+				</div>
+				<div class="chatbox-message-dropdown">
+					<i class='bx bx-dots-vertical-rounded chatbox-message-dropdown-toggle'></i>
+					<ul class="chatbox-message-dropdown-menu">
+						<li>
+							<a href="#">Search</a>
+						</li>
+						<li>
+							<a href="#" id="signOutBtn">Sign Out</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="chatbox-message-content" style="background-color: brown;">
+				<h4 class="chatbox-message-no-message">You don't have message yet!</h4>
+			</div>
+			<div class="chatbox-message-bottom">
+				<form action="#" class="chatbox-message-form">
+					<textarea rows="1" placeholder="Type message..." class="chatbox-message-input"></textarea>
+					<button type="submit" class="chatbox-message-submit"><i class='bx bx-send'></i></button>
+				</form>
+			</div>
+		</div>
+	</div> -->
+  

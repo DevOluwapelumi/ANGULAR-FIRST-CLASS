@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Message } from './message.model';
 interface Student{
   firstname:string,
   lastname:string
@@ -11,6 +12,7 @@ interface Student{
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  messages: Message[] = [];
   title = 'firstangularclass';
   public name:string = "Oluwapelumi";
   public age: number = 1000;
@@ -33,6 +35,8 @@ export class AppComponent {
   }
   ngOnInit() {
     console.log(this.allschool);
-    
+  }
+  onMessageSent(message: Message) {
+    this.messages.push(message);
   }
 }

@@ -21,6 +21,8 @@ import { State2Component } from './state2/state2.component';
 import { AssdetailsComponent } from './assdetails/assdetails.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { SendMessageComponent } from './send-message/send-message.component';
+import { ReceiveMessageComponent } from './receive-message/receive-message.component';
 // import { RegisterComponent } from './register/register.component';
 
 @NgModule({
@@ -42,6 +44,8 @@ import { ChildComponent } from './child/child.component';
     AssdetailsComponent,
     ParentComponent,
     ChildComponent,
+    SendMessageComponent,
+    ReceiveMessageComponent,
     // RegisterComponent,
   ],
   imports: [
