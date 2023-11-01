@@ -39,3 +39,12 @@ Two-Way Data Binding: Angular supports two-way data binding, which means changes
 Dependency Injection: Angular uses a powerful dependency injection system to manage dependencies and make it easy to test components in isolation.
 
 Directives: Angular provides a range of directives that allow you to extend HTML with custom behavior. Common directives include ngIf, ngFor, and ngModel.
+Templates: Angular uses templates written in HTML to define the UI of your application. You can use data binding and directives within templates to create dynamic views.
+
+Services: Services in Angular are used to share data and functionality across different parts of the application. They are typically used for business logic and data retrieval.
+
+Routing: Angular has a powerful routing system that allows you to create single-page applications (SPAs) with multiple views. You can define routes, associate components with those routes, and enable navigation.
+
+RxJS: Angular often uses the Reactive Extensions for JavaScript (RxJS) library to work with asynchronous data streams and handle events. This is particularly useful for handling HTTP requests.
+
+CLI (Command Line Interface): Angular provides a command-line tool to streamline project setup, code generation, testing, and deployment. The Angular CLI simplifies many common development tasks.
