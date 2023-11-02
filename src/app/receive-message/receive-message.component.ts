@@ -7,7 +7,6 @@ import { Message } from '../message.model';
   styleUrls: ['./receive-message.component.css']
 })
 export class ReceiveMessageComponent {
-  // @Input() message: Message;
   @Input() message: Message = {} as Message;
 
   
