@@ -14,7 +14,6 @@ export class DisplayApiComponent {
     this.apiservice.getApiArray().subscribe(response => {
       this.apiArray=response
     console.log(this.apiArray);
-    
     }, (error) => {
       console.log(error);
       
