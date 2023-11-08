@@ -14,6 +14,10 @@ import { State2Component } from './state2/state2.component';
 import { AssdetailsComponent } from './assdetails/assdetails.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { EventparentComponent } from './eventparent/eventparent.component';
+import { EventchildComponent } from './eventchild/eventchild.component';
+import { EventsendComponent } from './eventsend/eventsend.component';
+import { EventreceiveComponent } from './eventreceive/eventreceive.component';
 
 const routes: Routes = [
   { path: 'Home', component:HomeComponent },
@@ -31,7 +35,11 @@ const routes: Routes = [
   { path: 'state1', component:State1Component },
   { path: 'state2', component:State2Component },
   { path: 'parent', component:ParentComponent },
+  { path: 'eventparent', component:EventparentComponent },
+  { path: 'eventsend', component:EventsendComponent },
   { path: 'child', component:ChildComponent },
+  { path: 'eventchild', component:EventchildComponent },
+  { path: 'eventreceive', component:EventreceiveComponent },
 
   {}
 ];

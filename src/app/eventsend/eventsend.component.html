@@ -1,0 +1,17 @@
+<div class="container">
+    <h1 class="text-center text-info">Event Send Component</h1>
+    <div class="row shadow bg-light mb-5">
+        <div class="col-7 mx-auto">
+           <input type="text" class="form-control my-2" [(ngModel)]="sending" >
+        </div>
+        <div class="col-5 shadow">
+            <p><b>Message From Child:</b> {{acceptSending}}</p>
+        </div>
+    </div>
+
+    <div class="row shadow bg-light">
+        <div class="col-8 mx-auto">
+<app-eventreceive  [chatSending]="sending" (commentEmitter)="receiveChat($event)"></app-eventreceive>
+        </div>
+    </div>
+</div>

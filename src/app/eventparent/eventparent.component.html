@@ -1,0 +1,18 @@
+
+<div class="container">
+    <div class="row">
+        <h6 class="text-info text-cneter">Parent Component</h6>
+        <div class="col-5 shadow">
+            <label for="">Message To Child:</label>
+            <input type="text" class="form-control my-2" [(ngModel)]="MsgToChild">
+            <button class="btn btn-info w-100" (click)="sendMsg()">Send Message</button>
+    </div>
+    <div class="col-6 shadow">
+    <p>Message From Child: <span class="text-danger">{{receiveResponse}}</span></p>
+</div>
+</div>
+    <div class="row">
+        <app-eventchild [receiveMsg]="msgToChild2" (childEmitter)="receiveEmitMsg($event)"></app-eventchild>
+       
+    </div>
+</div>

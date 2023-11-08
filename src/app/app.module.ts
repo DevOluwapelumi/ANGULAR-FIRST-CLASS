@@ -23,6 +23,10 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { SendMessageComponent } from './send-message/send-message.component';
 import { ReceiveMessageComponent } from './receive-message/receive-message.component';
+import { EventparentComponent } from './eventparent/eventparent.component';
+import { EventchildComponent } from './eventchild/eventchild.component';
+import { EventsendComponent } from './eventsend/eventsend.component';
+import { EventreceiveComponent } from './eventreceive/eventreceive.component';
 // import { RegisterComponent } from './register/register.component';
 
 @NgModule({
@@ -46,6 +50,10 @@ import { ReceiveMessageComponent } from './receive-message/receive-message.compo
     ChildComponent,
     SendMessageComponent,
     ReceiveMessageComponent,
+    EventparentComponent,
+    EventchildComponent,
+    EventsendComponent,
+    EventreceiveComponent,
     // RegisterComponent,
   ],
   imports: [
