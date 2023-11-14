@@ -18,6 +18,7 @@ import { EventparentComponent } from './eventparent/eventparent.component';
 import { EventchildComponent } from './eventchild/eventchild.component';
 import { EventsendComponent } from './eventsend/eventsend.component';
 import { EventreceiveComponent } from './eventreceive/eventreceive.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 const routes: Routes = [
   { path: 'Home', component:HomeComponent },
@@ -40,6 +41,7 @@ const routes: Routes = [
   { path: 'child', component:ChildComponent },
   { path: 'eventchild', component:EventchildComponent },
   { path: 'eventreceive', component:EventreceiveComponent },
+  { path: 'reactiveForm', component:ReactiveFormComponent },
 
   {}
 ];

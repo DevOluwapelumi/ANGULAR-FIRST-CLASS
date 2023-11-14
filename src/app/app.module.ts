@@ -9,7 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AddtocartComponent } from './addtocart/addtocart.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { addTodoComponent } from './addtodo/addtodo.component';
 import { ContactDetailsComponent } from './contact-details/contact-details.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
@@ -27,6 +27,7 @@ import { EventparentComponent } from './eventparent/eventparent.component';
 import { EventchildComponent } from './eventchild/eventchild.component';
 import { EventsendComponent } from './eventsend/eventsend.component';
 import { EventreceiveComponent } from './eventreceive/eventreceive.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 // import { RegisterComponent } from './register/register.component';
 
 @NgModule({
@@ -54,13 +55,15 @@ import { EventreceiveComponent } from './eventreceive/eventreceive.component';
     EventchildComponent,
     EventsendComponent,
     EventreceiveComponent,
+    ReactiveFormComponent,
     // RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

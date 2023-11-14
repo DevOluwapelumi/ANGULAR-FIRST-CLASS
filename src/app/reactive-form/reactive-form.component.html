@@ -1,0 +1,61 @@
+<div class="container bg-secondary">
+    <div class="row">
+        <div class="col-6 col-lg-6 shadow">
+            <h6 class="text-center text-info"><b>Reactive Form</b></h6>
+            <form [formGroup]="forms">
+                <input type="text" placeholder="First Name" class="form-control my-2" formControlName="firstname">
+                <input type="text" placeholder="Surname" class="form-control my-2" formControlName="lastname">
+                <input type="text" placeholder="Age" class="form-control my-2" formControlName="age">
+                <input type="text" placeholder="Email" class="form-control my-2" formControlName="email">
+                <input type="text" placeholder="Password" class="form-control my-2" formControlName="password">
+                <button class="btn btn-dark w-100 my-2" (click)="submitForm()">Submit</button>
+            </form>
+        </div>
+        <div class="col-6 col-lg-6 shadow">
+            <h6 class="text-center text-info"><b>Template Driven Form</b></h6>
+            <div *ngIf="registrationSuccessful" class="alert alert-success text-green p-2 mt-2"><b> Form Submitted Successfully!!! </b></div>
+
+            <form #ngForm="ngForm" (ngSubmit)="submitForms(ngForm)">
+
+              <div *ngIf="fname.invalid && fname.dirty" class="bg-white text-danger shadow p-1 ms-2" style="position: absolute; margin: -25px; border-radius: 5px;">
+                <span *ngIf="fname?.errors?.['minlength']">Minimum length required is 5</span>
+              </div>
+              <input type="text" placeholder="First Name" class="form-control my-2" name="firstname" [(ngModel)]="firstname" #fname="ngModel" minlength="5" maxlength="10"
+                [class.is-valid]="fname.valid && fname.dirty && fname.value !== ''"
+                [class.is-invalid]="fname.invalid && fname.dirty" required>
+              
+              <div *ngIf="lname.invalid && lname.dirty" class="bg-white text-danger shadow p-1 ms-2" style="position: absolute; margin: -25px; border-radius: 5px">
+                <span *ngIf="lname?.errors?.['required']">Last Name is required</span>
+              </div>
+              <input type="text" placeholder="Surname" class="form-control my-2" [(ngModel)]="lastname" name="lastname" #lname="ngModel"
+              [class.is-valid]="lname.valid && lname.dirty && lname.value !== ''"
+              [class.is-invalid]="lname.invalid && lname.dirty" required>
+              
+              <div *ngIf="aged.invalid && aged.dirty" class="bg-white text-danger shadow p-1 ms-2" style="position: absolute; margin: -25px; border-radius: 5px;">
+                <span *ngIf="aged?.errors?.['required']">Age is required</span>
+              </div>
+              <input type="number" placeholder="Age" class="form-control my-2" [(ngModel)]="age" name="age" #aged="ngModel"
+              [class.is-valid]="aged.valid && aged.dirty && aged.value !== ''"
+              [class.is-invalid]="aged.invalid && aged.dirty" required>
+              
+              <div *ngIf="mail.invalid && mail.dirty" class="bg-white text-danger shadow p-1 ms-2" style="position: absolute; margin: -25px; border-radius: 5px;">
+                <span *ngIf="mail?.errors?.['required']">Email is required</span>
+                <span *ngIf="mail?.errors?.['invalidDomain']">Invalid email domain. Allowed domains: (@gmail.com, @outlook.com)</span>
+              </div>
+              <input type="email" placeholder="Email" class="form-control my-2" [(ngModel)]="email"  name="email" #mail="ngModel" 
+              [class.is-valid]="mail.valid && mail.dirty && mail.value !== ''"
+              [class.is-invalid]="mail.invalid && mail.dirty" required invalidDomain>
+
+              <div *ngIf="pass.invalid && pass.dirty" class="bg-white text-danger shadow p-1 ms-2" style="position: absolute; margin: -25px; border-radius: 5px;">
+                <span *ngIf="pass?.errors?.['minlength']">Minimum length required is 5</span>
+              </div>
+              <input type="text" placeholder="Password" class="form-control my-2" [(ngModel)]="password"  name="password" #pass="ngModel" minlength="8" maxlength="12"
+              [class.is-valid]="pass.valid && pass.dirty && pass.value !== ''"
+                [class.is-invalid]="pass.invalid && pass.dirty" required>
+          
+              <button class="btn btn-dark w-100 my-2" type="submit" [disabled]="ngForm.invalid">Submit</button>
+            </form>
+          </div>
+    </div>
+</div>
+
