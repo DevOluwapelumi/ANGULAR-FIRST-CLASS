@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, NgForm } from '@angular/forms';
+import { FormBuilder, NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-form',
@@ -17,11 +17,11 @@ export class ReactiveFormComponent {
   public registrationSuccessful: boolean = false;
   
   public forms = this.formbuilder.group({
-    firstname:[''],
-    lastname:[''],
-    age:[''],
-    email:[''],
-    password:[''],
+    firstname:['', Validators.required],
+    lastname:['', Validators.required],
+    age:['', Validators.required],
+    email:['', [Validators.required, Validators.maxLength(10)]],
+    password:['',[Validators.required, Validators.maxLength(8)]],
   })
 
 

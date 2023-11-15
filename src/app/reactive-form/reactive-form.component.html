@@ -1,18 +1,52 @@
 <div class="container bg-secondary">
     <div class="row">
         <div class="col-6 col-lg-6 shadow">
-            <h6 class="text-center text-info"><b>Reactive Form</b></h6>
+            <h6 class="text-center text-info"><b>Reactive Form(Validation)</b></h6>
             <form [formGroup]="forms">
-                <input type="text" placeholder="First Name" class="form-control my-2" formControlName="firstname">
-                <input type="text" placeholder="Surname" class="form-control my-2" formControlName="lastname">
+                <input type="text" placeholder="First Name" class="form-control my-2" formControlName="firstname"
+                [class.is-valid]="forms.get('firstname')?.invalid && forms.get('firstname')?.touched"
+                [class.is-invalid]="forms.get('firstname')?.invalid && forms.get('firstname')?.touched">
+                <div *ngIf="forms.get('firstname')?.invalid && forms.get('firstname')?.touched">
+                <span class="text-center text-danger" *ngIf="forms.get('firstname')?.errors?.['required']">This field is required</span></div>
+
+                <input type="text" placeholder="Surname" class="form-control my-2" formControlName="lastname"
+                [class.is-valid]="forms.get('lastname')?.invalid && forms.get('lastname')?.touched"
+                [class.is-invalid]="forms.get('lastname')?.invalid && forms.get('lastname')?.touched">
+                <div *ngIf="forms.get('lastname')?.invalid && forms.get('lastname')?.touched">
+                <span class="text-center text-danger" *ngIf="forms.get('lastname')?.errors?.['required']">This field is required</span></div>
+
                 <input type="text" placeholder="Age" class="form-control my-2" formControlName="age">
-                <input type="text" placeholder="Email" class="form-control my-2" formControlName="email">
-                <input type="text" placeholder="Password" class="form-control my-2" formControlName="password">
-                <button class="btn btn-dark w-100 my-2" (click)="submitForm()">Submit</button>
+
+                <input type="text" placeholder="Email" class="form-control my-2" formControlName="email"
+                [class.is-valid]="forms.get('email')?.invalid && forms.get('email')?.touched"
+                [class.is-invalid]="forms.get('email')?.invalid && forms.get('email')?.touched">
+                <div *ngIf="forms.get('email')?.invalid && forms.get('email')?.touched">
+                <span class="text-center text-danger" *ngIf="forms.get('email')?.errors?.['required']">This field is required</span>
+               <span *ngIf="forms.get('email')?.errors?.['maxlength']">Maximum length required is 10</span></div>
+
+                <input type="text" placeholder="Password" class="form-control my-2" formControlName="password"
+                [class.is-valid]="forms.get('password')?.invalid && forms.get('password')?.touched"
+                [class.is-invalid]="forms.get('password')?.invalid && forms.get('password')?.touched">
+                <div *ngIf="forms.get('password')?.invalid && forms.get('password')?.touched">
+                <span class="text-center text-danger" *ngIf="forms.get('password')?.errors?.['required']">This field is required</span>
+                <span *ngIf="forms.get('password')?.errors?.['maxlength']">Maximum length required is 8</span></div>
+
+                <button class="btn btn-dark w-100 my-2" type="submit" [disabled]="forms.invalid" (click)="submitForm()">Submit</button>
             </form>
         </div>
+
+
+
+
+
+
+
+
+
+
+
         <div class="col-6 col-lg-6 shadow">
-            <h6 class="text-center text-info"><b>Template Driven Form</b></h6>
+            <h6 class="text-center text-info"><b>Template Driven Form(Validation)</b></h6>
             <div *ngIf="registrationSuccessful" class="alert alert-success text-green p-2 mt-2"><b> Form Submitted Successfully!!! </b></div>
 
             <form #ngForm="ngForm" (ngSubmit)="submitForms(ngForm)">

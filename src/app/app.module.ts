@@ -28,6 +28,9 @@ import { EventchildComponent } from './eventchild/eventchild.component';
 import { EventsendComponent } from './eventsend/eventsend.component';
 import { EventreceiveComponent } from './eventreceive/eventreceive.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { AComponent } from './a/a.component';
+import { BComponent } from './b/b.component';
+import { CComponent } from './c/c.component';
 // import { RegisterComponent } from './register/register.component';
 
 @NgModule({
@@ -56,6 +59,9 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     EventsendComponent,
     EventreceiveComponent,
     ReactiveFormComponent,
+    AComponent,
+    BComponent,
+    CComponent,
     // RegisterComponent,
   ],
   imports: [
