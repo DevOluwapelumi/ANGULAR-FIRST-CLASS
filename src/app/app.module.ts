@@ -31,6 +31,18 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { AComponent } from './a/a.component';
 import { BComponent } from './b/b.component';
 import { CComponent } from './c/c.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatTableModule} from '@angular/material/table';
+import { AngmaterialComponent } from './angmaterial/angmaterial.component';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { SnackBarComponent } from './snack-bar/snack-bar.component';
 // import { RegisterComponent } from './register/register.component';
 
 @NgModule({
@@ -62,14 +74,25 @@ import { CComponent } from './c/c.component';
     AComponent,
     BComponent,
     CComponent,
-    // RegisterComponent,
+    AngmaterialComponent,
+    SnackBarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatDividerModule,
+    MatIconModule,
+    MatSlideToggleModule,
+    MatBadgeModule,
+    MatTableModule,
+    MatSnackBarModule,
+    MatInputModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
